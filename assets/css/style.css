@@ -1,0 +1,147 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #FF6A13; /* Shopee-style orange */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 28px;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+/* Main Product Section */
+main {
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-gallery .product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-gallery .product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-gallery .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-gallery .product .product-info {
+    padding: 15px;
+}
+
+.product-gallery .product .product-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-gallery .product .product-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product-gallery .product .product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6A13;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .product-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-gallery .product {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        font-size: 14px;
+    }
+}
